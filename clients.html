@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="client.css">
+    <title>Daily clients</title>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/lilie.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        Parkville Parking
+      </a> 
+     <!-- model
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+     <!-- dropdown -->
+     <div class="dropdown">
+      <a  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-user-circle-o"style="font-size:34px;"></i>
+      </a>
+    
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Messeages</a></li>
+        <li><a class="dropdown-item" href="#">Log Out</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+
+       <!-- container -->
+  <div>
+    <div class="container-two" id="content-one">
+      <div class="row">
+        <div class="col">
+          <div class="card border-success mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-title">
+                  <h2>Revenues<span class="span"><i class="fa fa-money" aria-hidden="true"></i></span></h2>
+                  <hr>
+                <p class="display-1">500,000<span class="span-two" style="color:green">ugx</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- table top -->
+</div>
+<div>
+    <div class="container-three" id="content-two">
+      <div class="row">
+        <div class="col" id="col-one">
+          <h2></h2>
+        </div>
+        <div class="col" id="col-two">
+           <!-- model -->
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Register New clients</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Name</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Phone Number</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">NIN number</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Number Plate</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Model</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Date</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Time</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Gender</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Service</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Type</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Color</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Cost</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Receipt</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <!-- <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+        <!-- <div class="table-title">
+            <h2>Signed Off Clients<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></h2>
+        </div>
+        <div>
+        </div> -->
+        <!-- table -->
+        <div class="title">
+          <h1>Client Reg</h1>
+        </div>
+        <div class="row">
+          <div class="col" id="table-one">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <!-- <th scoop="col">No</th> -->
+                  <th scoop="col">Name</th>
+                  <th scoop="col">Phone number</th>
+                  <th scoop="col">Number plate</th>
+                  <th scoop="col">Service Type</th>
+                  <th scoop="col">Price</th>
+                  <th scoop="col">Paid</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <!-- <th scope="row">1.</th> -->
+                  <td>mark otto</td>
+                  <td>0707409609</td>
+                  <td>UBB 123Q</td>
+                  <td>parking</td>
+                  <td>taken</td>
+                  <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">2.</th> -->
+                  <td>mark otto</td>
+                  <td>0707409609</td>
+                  <td>UBB 123Q</td>
+                  <td>parking</td>
+                  <td>taken</td>
+                  <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">3.</th> -->
+                  <td>mark otto</td>
+                  <td>0707409609</td>
+                  <td>UBB 123Q</td>
+                  <td>parking</td>
+                  <td>taken</td>
+                  <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">4.</th> -->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">5.</th> -->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">6.</th> -->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+       </div>
+     </div>
+    </div>
+  </div>
+
+</body>
+<script src="client.js"></script>
+</html>
