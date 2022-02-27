@@ -9,282 +9,431 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="client.css">
-    <title>Daily clients</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <title>Dashboard</title>
 </head>
 <body>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="img/lilie.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-        Parkville Parking
-      </a> 
-     <!-- model
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end" id="sidebar-wrapper">
+      <h2 class="logo">| ParkVille</h2>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fa fa-home"></i></a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fa fa-user"></i></a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fa fa-sign-out"></i></a>
+        </div>
     </div>
-  </div>
-</div> -->
-     <!-- dropdown -->
-     <div class="dropdown">
-      <a  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fa fa-user-circle-o"style="font-size:34px;"></i>
-      </a>
-    
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><a class="dropdown-item" href="#">Messeages</a></li>
-        <li><a class="dropdown-item" href="#">Log Out</a></li>
-      </ul>
-    </div>
-</nav>
-
-
-
-       <!-- container -->
-  <div>
-    <div class="container-two" id="content-one">
-      <div class="row">
-        <div class="col">
-          <div class="card border-success mb-3">
-            <div class="card">
-              <div class="card-body">
-                <div class="card-title">
-                  <h2>Revenues<span class="span"><i class="fa fa-money" aria-hidden="true"></i></span></h2>
-                  <hr>
-                <p class="display-1">500,000<span class="span-two" style="color:green">ugx</span></p>
-                </div>
-              </div>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <!-- Top navigation-->
+                <button class="btn btn-outline" id="sidebarToggle"><i class="fa fa-bars"></i></button>
+                <!-- model -->
+                <!-- <button type="button" class="btn btn-success button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Register New clients</button> 
+        
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Name</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Phone Number</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                          </div>
+                          <div class="col-12">
+                            <label for="inputAddress" class="form-label">NIN number</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Number Plate</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Model</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Date</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Time</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">Gender</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">Service</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">Type</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">Color</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">Cost</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2">
+                            <label for="inputZip" class="form-label">Receipt</label>
+                            <input type="text" class="form-control" id="inputZip">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Register</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+        <!-- Page content-->
+        <div class="container-fluid">
+          <div>
+            <div class="container-two" id="content-one">
+              <canvas id="myChart" style="width:25%; max-width:400px; margin-left: 300px;"></canvas>
             </div>
           </div>
-        </div>
-        <div class="col">
-          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-
-  <!-- table top -->
-</div>
-<div>
-    <div class="container-three" id="content-two">
-      <div class="row">
-        <div class="col" id="col-one">
-          <h2></h2>
-        </div>
-        <div class="col" id="col-two">
-           <!-- model -->
-  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Register New clients</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="row g-3">
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Name</label>
-            <input type="email" class="form-control" id="inputEmail4">
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Phone Number</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">NIN number</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label">Number Plate</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label">Model</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-          </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">Date</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">Time</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">Gender</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">Service</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">Type</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">Color</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">Cost</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label for="inputZip" class="form-label">Receipt</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                Check me out
-              </label>
-            </div>
-          </div>
-          <!-- <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
-          </div> -->
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Register</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-      </div>
-        <!-- <div class="table-title">
-            <h2>Signed Off Clients<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></h2>
         </div>
         <div>
-        </div> -->
-        <!-- table -->
-        <div class="title">
-          <h1>Client Reg</h1>
-        </div>
-        <div class="row">
-          <div class="col" id="table-one">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <!-- <th scoop="col">No</th> -->
-                  <th scoop="col">Name</th>
-                  <th scoop="col">Phone number</th>
-                  <th scoop="col">Number plate</th>
-                  <th scoop="col">Service Type</th>
-                  <th scoop="col">Price</th>
-                  <th scoop="col">Paid</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <!-- <th scope="row">1.</th> -->
-                  <td>mark otto</td>
-                  <td>0707409609</td>
-                  <td>UBB 123Q</td>
-                  <td>parking</td>
-                  <td>taken</td>
-                  <td><i class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                  <!-- <th scope="row">2.</th> -->
-                  <td>mark otto</td>
-                  <td>0707409609</td>
-                  <td>UBB 123Q</td>
-                  <td>parking</td>
-                  <td>taken</td>
-                  <td><i class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                  <!-- <th scope="row">3.</th> -->
-                  <td>mark otto</td>
-                  <td>0707409609</td>
-                  <td>UBB 123Q</td>
-                  <td>parking</td>
-                  <td>taken</td>
-                  <td><i class="fa fa-check"></i></td>
-                </tr>
-                <tr>
-                  <!-- <th scope="row">4.</th> -->
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></i></td>
-                </tr>
-                <tr>
-                  <!-- <th scope="row">5.</th> -->
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <!-- <th scope="row">6.</th> -->
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="container-three" id="content-two">
+              <div class="row">
+                <div class="col" id="col-one">
+                  <h2></h2>
+                </div>
+                <div class="col" id="col-two">
+                </div>
+              </div>
+                <!-- <div class="table-title">
+                    <h2>Signed Off Clients<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></h2>
+                </div>
+                <div>
+                </div> -->
+                <!-- DATA TABLE -->
+                <h3 class="title-5 m-b-35">data table</h3>
+                <div class="table-data__tool">
+                    <div class="table-data__tool-left">
+                            <!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    All Properties
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Today
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+                        <button class="au-btn-filter">
+                            <i class="zmdi zmdi-filter-list"></i>filters</button>
+                    </div>
+                    <div class="table-data__tool-right">
+                        <!-- mode reg button -->
+                        <button type="button" class="btn btn-success button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">+ Add Client</button> 
+        
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3">
+                                  <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Name</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Phone Number</label>
+                                    <input type="password" class="form-control" id="inputPassword4">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="inputAddress" class="form-label">NIN number</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">Number Plate</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">Model</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">Date</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">Time</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Gender</label>
+                                    <select id="inputState" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Service</label>
+                                    <select id="inputState" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Type</label>
+                                    <select id="inputState" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Color</label>
+                                    <select id="inputState" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Cost</label>
+                                    <select id="inputState" class="form-select">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <label for="inputZip" class="form-label">Receipt</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Register</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-dark">Export</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="table-responsive table-responsive-data2">
+                    <table class="table table-data2">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="au-checkbox">
+                                        <input type="checkbox">
+                                        <span class="au-checkmark"></span>
+                                    </label>
+                                </th>
+                                <th>name</th>
+                                <th>email</th>
+                                <th>description</th>
+                                <th>date</th>
+                                <th>status</th>
+                                <th>price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tr-shadow">
+                                <td>
+                                    <label class="au-checkbox">
+                                        <input type="checkbox">
+                                        <span class="au-checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>Lori Lynch</td>
+                                <td>
+                                    <span class="block-email">lori@example.com</span>
+                                </td>
+                                <td class="desc">Samsung S8 Black</td>
+                                <td>2018-09-27 02:12</td>
+                                <td>
+                                    <span class="status--process">Processed</span>
+                                </td>
+                                <td>$679.00</td>
+                                <td>
+                                    <div class="table-data-feature">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                            <i class="zmdi zmdi-mail-send"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                            <i class="zmdi zmdi-more"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="spacer"></tr>
+                            <tr class="tr-shadow">
+                                <td>
+                                    <label class="au-checkbox">
+                                        <input type="checkbox">
+                                        <span class="au-checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>Lori Lynch</td>
+                                <td>
+                                    <span class="block-email">john@example.com</span>
+                                </td>
+                                <td class="desc">iPhone X 64Gb Grey</td>
+                                <td>2018-09-29 05:57</td>
+                                <td>
+                                    <span class="status--process">Processed</span>
+                                </td>
+                                <td>$999.00</td>
+                                <td>
+                                    <div class="table-data-feature">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                            <i class="zmdi zmdi-mail-send"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                            <i class="zmdi zmdi-more"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="spacer"></tr>
+                            <tr class="tr-shadow">
+                                <td>
+                                    <label class="au-checkbox">
+                                        <input type="checkbox">
+                                        <span class="au-checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>Lori Lynch</td>
+                                <td>
+                                    <span class="block-email">lyn@example.com</span>
+                                </td>
+                                <td class="desc">iPhone X 256Gb Black</td>
+                                <td>2018-09-25 19:03</td>
+                                <td>
+                                    <span class="status--denied">Denied</span>
+                                </td>
+                                <td>$1199.00</td>
+                                <td>
+                                    <div class="table-data-feature">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                            <i class="zmdi zmdi-mail-send"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                            <i class="zmdi zmdi-more"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="spacer"></tr>
+                            <tr class="tr-shadow">
+                                <td>
+                                    <label class="au-checkbox">
+                                        <input type="checkbox">
+                                        <span class="au-checkmark"></span>
+                                    </label>
+                                </td>
+                                <td>Lori Lynch</td>
+                                <td>
+                                    <span class="block-email">doe@example.com</span>
+                                </td>
+                                <td class="desc">Camera C430W 4k</td>
+                                <td>2018-09-24 19:10</td>
+                                <td>
+                                    <span class="status--process">Processed</span>
+                                </td>
+                                <td>$699.00</td>
+                                <td>
+                                    <div class="table-data-feature">
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                            <i class="zmdi zmdi-mail-send"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="zmdi zmdi-edit"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                            <i class="zmdi zmdi-more"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- END DATA TABLE -->
+             </div>
+            </div>
           </div>
         </div>
-       </div>
-     </div>
     </div>
   </div>
-
 </body>
 <script src="client.js"></script>
 </html>

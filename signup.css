@@ -1,29 +1,29 @@
 body{
-    /* background-image:url(img/cutie-2.jpg); */
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
+    /* overflow: hidden; */
 }
 
-.signup-box{
-    width: 360px;
-    height: 620px;
-    margin: auto;
-    /* background-color:cornflowerblue; */
-    border-radius: 3px;
-}
 
-h1{
+.logo{
+    color: #2eb875;
+    font-weight: 1000;
+    font-size: 28px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 10px;
+    margin-right: 50px;
+}
+  
+img {
+    width: 700px;
+    height: 700px;
 }
 
-h4{
-    text-align: center;
-}
 form{
-    width: 300px ;
-    margin-left: 20px ;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 0px;
 }
 
 form label{
@@ -40,33 +40,22 @@ form input{
     border-radius: 6px;
     outline: none;
 }
-input[type="button"]{
-width: 320px;
-height: 35px;
-margin-top: 20px;
-border: none;
-background-color:green;
-color: aliceblue;
-font-size: 18px;
-}
 
 p{
     text-align: center;
-    padding-top: 20px;
     font-size: 15px;
-    color: white;
+    color:#2eb875;
     margin-top: 10px;
+    font-weight: bold;
 }
 
-p{
-    text-align: ;
-    color: white;
-    font-size: 15px;
-    margin-top: 10px;
+.SignUp-box a {
+    text-decoration: none;
+    color: #2eb875;
 }
  
-p a{
+/* p a{
     color:darkorchid;
     text-decoration: none;
     font-weight: bold;
-}
+} */

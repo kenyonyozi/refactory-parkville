@@ -1,0 +1,360 @@
+<nav class="navbar navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <h2 class="logo">| ParkVille</h2>
+      </a> 
+     <!-- dropdown -->
+     <div class="dropdown">
+      <a  id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-user-circle-o"style="font-size:34px;"></i>
+      </a>
+    
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Messeages</a></li>
+        <li><a class="dropdown-item" href="#">Log Out</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+
+       <!-- container -->
+  <div>
+    <div class="container-two" id="content-one">
+      <div class="row">
+        <div class="col">
+          <div class="card border-success mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-title">
+                  <h2>Revenues<span class="span"><i class="fa fa-money" aria-hidden="true"></i></span></h2>
+                  <hr>
+                <p class="display-1">500,000<span class="span-two" style="color:green">ugx</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- table top -->
+</div>
+<div>
+    <div class="container-three" id="content-two">
+      <div class="row">
+        <div class="col" id="col-one">
+          <h2></h2>
+        </div>
+        <div class="col" id="col-two">
+           <!-- model -->
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Register New clients</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Name</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Phone Number</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">NIN number</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Number Plate</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Model</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Date</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Time</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Gender</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Service</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Type</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Color</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Cost</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Receipt</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <!-- <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </div> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+        <!-- <div class="table-title">
+            <h2>Signed Off Clients<span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></h2>
+        </div>
+        <div>
+        </div> -->
+        <!-- table -->
+        <div class="title">
+          <h1>Client Reg</h1>
+        </div>
+        <div class="row">
+          <div class="col" id="table-one">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <!-- <th scoop="col">No</th> -->
+                  <th scoop="col">Name</th>
+                  <th scoop="col">Phone number</th>
+                  <th scoop="col">Number plate</th>
+                  <th scoop="col">Service Type</th>
+                  <th scoop="col">Price</th>
+                  <th scoop="col">Paid</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <!-- <th scope="row">1.</th> -->
+                  <td>mark otto</td>
+                  <td>0707409609</td>
+                  <td>UBB 123Q</td>
+                  <td>parking</td>
+                  <td>taken</td>
+                  <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">2.</th> -->
+                  <td>mark otto</td>
+                  <td>0707409609</td>
+                  <td>UBB 123Q</td>
+                  <td>parking</td>
+                  <td>taken</td>
+                  <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">3.</th> -->
+                  <td>mark otto</td>
+                  <td>0707409609</td>
+                  <td>UBB 123Q</td>
+                  <td>parking</td>
+                  <td>taken</td>
+                  <td><i class="fa fa-check"></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">4.</th> -->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></i></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">5.</th> -->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <!-- <th scope="row">6.</th> -->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+       </div>
+     </div>
+    </div>
+  </div>
+
+
+
+
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(234, 248, 234);
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: lighter;
+}
+.logo{
+    color: #2eb875;
+    font-weight: 1000;
+    font-size: 28px;
+}
+#content-one{
+    margin-top: 70px;
+    margin-left: 35px;
+}
+.card-body{
+    border: 5px soild green;
+    border-radius: 1%;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.card-title{
+    margin-left: 10%;
+    margin-top: 45px;
+}
+.card-title h2{
+    color: green;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.span{
+    margin-left: 10px;
+}
+.span-two{
+    font-size: smaller;
+}
+/* Style the table */
+table {
+    padding: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid green;
+    /* background-color: rgb(146, 185, 146); */
+    opacity: 20px;
+    height: 100px;
+  
+}
+/* table container */
+.container-three{
+    margin-top: 80px;
+}
+.title h1{
+    color: green;
+    /* font-size: larger; */
+    font-weight: bold;
+    margin-left: 100px;
+}
+#col-two{
+    margin-bottom: 60px;
+    margin-left: 50%;
+}
+  /* Style table headers and table data */
+#table-one{
+    /* border: 1px solid green; */
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+th{
+    padding-left: 50px;
+    font-family: sans-serif;
+    font-weight: 100px;
+    font-style: normal;
+}
+td{
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: large;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}
+th:hover{
+    /* background-color: orange; */
+}
+tr:hover{
+    /* background-color: green; */
+}
+.fa-check {
+    color: green;
+}
+.fa-remove {
+    color: red;
+}
+.fa fa-user-circle-o{
+    color: green;
+}
+.dropdown-menu{
+    /* padding-right: 10px; */
+    position: relative;
+    border: 1px solid green;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.dropdown-item{
+    font-family: sans-serif;
+    color: green;
+    font-weight: bold;
+}
