@@ -10889,8 +10889,8 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   } */
-}
 
+}
 #wrapper {
   overflow-x: hidden;
 }
@@ -10899,7 +10899,7 @@ textarea.form-control-lg {
   min-height: 100vh;
   margin-left: -15rem;
   transition: margin 0.25s ease-out;
-  background-color: #2e294e;
+  background-color: #fff;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -10965,9 +10965,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 .span{
     margin-left: 10px;
 }
-.span-two{
-    /* font-size: smaller; */
-}
+
 /* Style the table */
 table {
     padding: 20px;
@@ -10981,10 +10979,6 @@ table {
   
 }
 /* table container */
-.container-three{
-    /* margin-top: 10px; */
-    /* background-color: white; */
-}
 .title h1{
     color: green;
     /* font-size: larger; */
@@ -11040,7 +11034,27 @@ tr:hover{
     color: green;
     font-weight: bold;
 }
-.button{
-    /* float: right; */
-    /* margin-top: 10px; */
+#content{
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
+.welcome{
+  margin-left: 60px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.welcome h4{
+  font-size: xx-large;
+  font-weight: lighter;
+  font-family: euclidCircularB,Arial,sans-serif;
+  padding-bottom: 10px;
+}
+.welcome p{
+  font-size: medium;
+  font-family: euclidCircularB,Arial,sans-serif;
+  font-weight: lighter;
+  color: #2eb875;
+}
+#card
