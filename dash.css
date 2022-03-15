@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    /* font-family: 'GT Walsheim Pro'; */
+}
+
+.offcanvas-title{
+    text-align: center;
+    /* margin-bottom: 10%; */
+    margin-right: 30px;
+    color:  #2eb875;
+    font-weight: 1000;
+    font-size: 28px;
+}
+/* the hr */
+hr{
+    margin-bottom: 20px;
+}
+/* logo two */
+.logo-two{
+    text-align: center;
+    margin-right: 30px;
+    font-size: medium;
+    color: #757575;
+}
+.sidenav a{
+    text-decoration: none;
+    color: #818181;
+    
+}
+ /* When you mouse over the navigation links, change their color */
+ .sidenav a:hover {
+    color: rgb(115, 194, 115);
+}
+  
+  /* The navigation menu links */
+.sidenav{
+    padding: 5px 5px 8px 32px;
+    font-size: 17px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.home{
+    padding-bottom: 40px;
+}
+.user{
+    padding-bottom: 40px;
+}
+.price{
+    padding-bottom: 40px;
+}
+.log-out{
+    padding-top: 30px;
+}
+
+#content{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.welcome{
+    margin-left: 150px;
+    margin-bottom: 100px;
+    /* padding-top: 10px; */
+}
+.welcome h4{
+    font-size: xx-large;
+    font-weight: lighter;
+    font-family: euclidCircularB,Arial,sans-serif;
+    padding-bottom: 10px;
+}
+.welcome p{
+    font-size: medium;
+    font-family: euclidCircularB,Arial,sans-serif;
+    font-weight: bolder;
+    color: #2eb875;
+    margin-left: 10px;
+}
+span{
+    padding-right: 10px;
+}
+/* the cards */
+#content{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.card{
+    margin-left: 50px;
+    margin-right: 50px;
+    /* color: white; */
+    box-shadow: 2px 5px white;
+   
+}
+#card-one{
+    font-size: 1.15rem;
+    color: #48484D;
+
+}
+#title-one{
+    font-family: euclidCircularB,Arial,sans-serif;
+}
+#text-one{
+  
+}
+#text-one h5{
+    color: #757575;
+    font-size: 1rem
+    
+
+}
+#data-button{
+    float: right;
+    font-family: euclidCircularB,Arial,sans-serif;
+}
+.notify{
+    float: right;
+
+}
+#table-head{
+    margin-top: 60px;
+    margin-left: 50px;
+}
+#table-content{
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-right: 50PX;
+}
