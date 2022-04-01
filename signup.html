@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Signup</title>
 </head>
-<body>
-  <div class="container-main">
+<body onload="fastFocus()">
+  <!-- <div class="container-main">  -->
     <div class="row">
         <div class="col">
             <img src="img/taxi-park.jpeg">
@@ -19,25 +19,34 @@
         <div class="col align-self-center">
             <div class="SignUp-box">
                 <h2 class="logo"><a href="home.html">| ParkVille</a></h2>
-                <form>
-                  <label>First Name</label>
-                  <input  name="" id="firstname" type="text" placeholder="John">
+                <form name="register">
+                  <label for="fistname">First Name</label>
+                  <input  name="firstname" id="firstname"type="text" size= "50" onblur="userN(4,12)" placeholder="John">
+                  <div class="text-danger font-weight-bold small" id="fName"></div>
+
                   <label>Last Name</label>
-                  <input name="" id="lastname" type="text" placeholder="Doe">
+                  <input name="lastname" id="lastname" type="text" size= "50" onblur="userL(4,12)" placeholder="Doe">
+                  <div class="text-danger font-weight-bold small" id="lName"></div>
+
                   <label>Email</label>
-                  <input name="" id="email" type="text" placeholder="john.doe@gmail.com">
+                  <input name="email" id="email" type="text" size= "50" onblur="userE()" placeholder="john.doe@gmail.com">
+                  <div class="text-danger font-weight-bold small" id="email2"></div>
+
                   <label>Password</label>
-                  <input name="" id="password" type="text" placeholder="">
+                  <input name="password" id="password" type="text" size= "50" onblur="passVal(8,12)" placeholder="" value="">
+                  <div class="text-danger font-weight-bold small" id="pwd"></div>
+
                   <label>Confirm Password</label>
-                  <input name="" id="confirmpassword" type="text" placeholder="">
-                    <button name="" type="submit" id="submit" class="btn btn-success btn-lg btn-block"  style="width:100%; margin-top: 20px; font-weight: bold;" value="Submit">SIGNUP <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                  <input name="confirmpassword" id="confirmpassword" type="text"  size= "50" onblur="passId()" placeholder="" value="">
+                  <div class="text-danger font-weight-bold small" id="pwdd"></div>
+                    <button name="submit" type="submit" id="submit" class="btn btn-success btn-lg btn-block"  style="width:100%; margin-top: 20px; font-weight: bold;" value="Submit">SIGNUP <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                 </form>
                 <p>Already have an account?<a href="login.html"> Login here.</a></p>
             </div>
         </div>
     </div>
     
-  <script src="signup.js"></script>
-  <!-- <script src=""></script> -->
+  <!-- <script src="signup.js"></script> -->
+  <script src="validation.js"></script>
 </body>
 </html>
