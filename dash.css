@@ -62,17 +62,6 @@ hr {
   font-weight: bolder;
   font-size: x-large;
 }
-.log-out  {
-  padding: 0px 0px 10px 20px;
-  font-size: 17px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-a {
-  color: #818181;
-  text-decoration: none;
-}
 
 #content {
   margin-right: 10px;
@@ -83,7 +72,7 @@ a {
 .welcome {
   margin-left: 50px;
   margin-bottom: 30px;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 .welcome h4 {
   font-size: xx-large;
@@ -141,15 +130,11 @@ span {
 } 
 #data-button {
   float: right;
+  margin-bottom: 70px;
   font-family: euclidCircularB, Arial, sans-serif;
 }
 #add-button{
   margin-right: 25px;
-}
-.notify {
-  float: right;
-  margin-top: 20px;
-  margin-right: 20px;
 }
 
 th {
@@ -230,4 +215,32 @@ th {
 .ul dropdown-menu{
   margin-bottom: 40px;
   width: 50px;
+}
+#container-two{
+  margin-top: 100px;
+}
+#signoff{
+  margin-top: 100px;
+}
+#totals{
+  margin-top: 35px;
+  font-weight: bolder;
+}
+.parking{
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+.battery{
+  padding-bottom: 20px;
+}
+.car{
+  padding-bottom: 20px;
+}
+#button-signoff{
+  padding-right: 20px;
+}
+#signoff-button{
+  /* float: right; */
+  margin-bottom: 30px;
+
 }

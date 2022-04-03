@@ -3,6 +3,7 @@ const fastFocus = () =>{
     let userid = document.register.firstname.focus();
     return true
 };
+
 // globle variables for password
 // const passid = document.getElementById('password')
 // const passId = document.getElementById('confirmpassword')
@@ -54,11 +55,13 @@ const userL = (max,min) =>{
     return true
 }
 
+
+ let userEmail = document.register.email
 // validating email
-const userE = () => {
-    let userE = document.register.email
+const validateUserEmail = () => {
+    // let userEmail = document.register.email
     let emailexp = "^(.+)@(.+)$"
-    if(userE.value.match(emailexp)){
+    if(userEmail.value.match(emailexp)){
         document.register.password.focus()
         email_error.innerHTML = '';
         email.style.border ='1px solid green'
