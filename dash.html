@@ -13,12 +13,24 @@
     <title>ParkVille Dashboard</title>
 </head>
 <body>
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <h2 class="logo-two">| ParkVille</h2>
+      <div class="d-flex">
+        <div id="button-signoff">
+          <a href="signoff.html">
+            <button class="btn btn-success" type="submit">Signoff Clients</button>
+          </a>
+        </div>
+       <div> <button class="btn btn-outline-success" type="submit">Logout</button></div>
+        
+      </div>
+    </div>
+  </nav>
     <div>
-        <div class="notify">
-            <!-- <span><i class="bi bi-bell" style="font-size: 25px; color: #2eb875;"></i></span> -->
-            <div class="table-data__tool-right" id="data-button" onclick="fastFocus()">
-              <!-- mode reg button -->
-              <button type="button" id= "add-button"class="btn btn-success button"data-bs-toggle="modal"data-bs-target="#exampleModal"data-bs-whatever="@fat">
+        <!-- <div class="notify">
+            <div class="table-data__tool-right" id="data-button">
+              <button onclick="fastFocus()" type="button" id= "add-button"class="btn btn-success button"data-bs-toggle="modal"data-bs-target="#exampleModal"data-bs-whatever="@fat">
                 + Add Client
               </button>
   
@@ -245,13 +257,11 @@
                   </div>
                 </div>
               </div>
-              <!-- Default dropup button -->
 <div class="btn-group dropdown">
   <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bi bi-person" style='font-size: 45px; color: #2eb875;'></i></i>
   </button>
   <ul class="dropdown-menu" id="dropdown">
-    <!-- Dropdown menu links -->
     <li>
       <a href="login.html">
         <button type="button" class="log-out">
@@ -261,30 +271,22 @@
     </li>
   </ul>
 </div>
-              <!-- <div class="btn-group"> -->
-                <!-- <a href="home.html">
-                  <button type="button" class="btn btn-outline-success">LogOut</button>
-                </a> -->
-              <!-- </div> -->
            </div>
         </div>
-        <!-- the logo -->
         <div class="logo-two">
           | ParkVille
-        </div>
-        <!-- the content -->
+        </div> -->
             <div class="welcome">
                 <h4><span><i class="bi bi-person"></i></span>Hello Moses,</h4>
                 <p>Here is an over view of all ParkVille business activities</p>
             </div>
-            <!-- <hr  style="height:2px;border-width:0;color:#2eb875;background-color: #2eb875"> -->
-            <!-- cards -->
+           
             <div class="row">
                 <div class="col-sm-6">
                   <div class="card" id="card-one">
                     <div class="card-body">
                       <h5 class="card-title">
-                        <span>All Account Value in UGX</span> 
+                        <span>All Account Value For All Sectors in UGX</span> 
                         <span><i class="bi bi-eye-slash-fill"></i></span>Hide Balance
                       </h5>
                       <div class="card-text money">
@@ -297,9 +299,15 @@
                   <div class="card" id="card-two">
                     <div class="card-body">
                       <h5 class="card-title">ANALYTICS</h5>
-                      <div class="card-text">
-                        <div
-                        id="myChart" style="width:50%; max-width:600px; height:0px;">
+                      <div class="card-text" id="totals">
+                        <div class="parking">
+                        Parking <span>3000</span>
+                        </div>
+                        <div class="battery">
+                        Battery <span>30000</span>
+                        </div>
+                        <div class="car"> 
+                        Car Tyre <span>30000</span>
                         </div>
                     </div>
                   </div>
@@ -309,11 +317,475 @@
         <hr style="height:2px;border-width:0;color:#2eb875;background-color: #2eb875">
       </div>
        
-       <!-- table -->
+      <!-- reg client
+      <div>
+        <div class="table-data__tool-right" id="data-button">
+          <button type="button" id= "add-button"class="btn btn-success button"data-bs-toggle="modal"data-bs-target="#exampleModal"data-bs-whatever="@fat">
+            + Add Client
+          </button>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content"id="all">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    SERVICE REGISTRATION FORM
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form name="register" class="row g-3" id="regform">
+                    <div class="col-md-6">
+                      <label for="Name4" class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputName4"
+                        placeholder="Name"
+                        size=""
+                        onblur=""
+                        name="name" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPhonenumber4" class="form-label"
+                        >Phone Number</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputPhonenumber4"
+                        placeholder="phone number"
+                        size=""
+                        onblur=""
+                        name="phonenumber" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputninNumber" class="form-label"
+                        >NIN Number</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputninNumber"
+                        placeholder="NIN Number"
+                        size=""
+                        onblur=""
+                        name="ninnumber" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcolor" class="form-label"
+                        >Color</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputcolor"
+                        placeholder="Color"
+                        size=""
+                        onblur=""
+                        name="color" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputnumberplate" class="form-label"
+                        >Number Plate</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputnumberplate"
+                        placeholder="Number Plate"
+                        size=""
+                        onblur=""
+                        name="numberplate" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputModel" class="form-label">Model</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputModel"
+                        placeholder="Model"
+                        size=""
+                        onblur=""
+                        name="model" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="Date" class="form-label">Date</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="inputDate"
+                        size=""
+                        onblur=""
+                        name="date" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputtime" class="form-label">Time</label>
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="inputtime"
+                        size=""
+                        onblur=""
+                        name="time" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputgender" class="form-label"
+                        >Gender</label
+                      >
+                      <select id="inputgender" class="form-select" type="text" name="gender" size=""
+                      onblur=""required>
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputservice" class="form-label"
+                        >Service</label
+                      >
+                      <select id="inputgender" class="form-select" type="text" name="service" onblur="" required>
+                        <option>Parking</option>
+                        <option>Car Tyre</option>
+                        <option>Battery</option>
+                        <option>Nil</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputtypeofmodel" class="form-label">Description</label>
+                      <select id="inputgender" class="form-select" type="text" name="description" onblur="" required>
+                        <option>Personal Car</option>
+                        <option>Taxi</option>
+                        <option>Bodaboda</option>
+                        <option>Coaster</option>
+                        <option>Tyre Pressure</option>
+                        <option>Puncture Fixing</option>
+                        <option>Valves</option>
+                        <option>Battery Renting</option>
+                        <option>Null</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcolor" class="form-label">Duration</label>
+                      <select id="inputgender" class="form-select" type="text" name="duration" onblur="" required>
+                        <option>Day</option>
+                        <option>Night</option>
+                        <option>less than 3hrs</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputprice" class="form-label">Paid Price</label>
+                      <select id="inputgender" class="form-select" type="number" name="paidprice" onblur=""required>
+                        <option>10000</option>
+                        <option>5000</option>
+                        <option>4000</option>
+                        <option>3000</option>
+                        <option>2000</option>
+                        <option>1000</option>
+                        <option>500</option>
+                        <option>200</option>
+                        <option>Null</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputrecipt" class="form-label">Battery Price</label>
+                      <input type="number" class="form-control" id="inputbatteryprice" size=""
+                      onblur="" name="batteryprice" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputbatterysize" class="form-label">Battery Size</label>
+                      <input type="text" class="form-control" id="inputbatterysize" size=""
+                      onblur="" name="batterysize" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcartyreprice" class="form-label">Car Tyre Price</label>
+                      <input type="number" class="form-control" id="inputcartyreprice" size=""
+                      onblur="" name="cartyreprice" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcartyresize" class="form-label">Car Tyre Size</label>
+                      <input type="text" class="form-control" id="inputcartyresize" size=""
+                      onblur="" name="cartyresize" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcartyremake" class="form-label">Car Tyre Make</label>
+                      <input type="text" class="form-control" id="inputcartyremake" size=""
+                      onblur="" name="cartyremake" required />
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="submit" class="btn btn-outline-success">
+                        Register
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+    </div> -->
+       
        <div class="container">
+               <!-- reg client -->
+      <div>
+        <div class="table-data__tool-right" id="data-button">
+          <button type="button" id= "add-button"class="btn btn-success button"data-bs-toggle="modal"data-bs-target="#exampleModal"data-bs-whatever="@fat">
+            + Add Client
+          </button>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content"id="all">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    SERVICE REGISTRATION FORM
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form name="register" class="row g-3" id="regform">
+                    <div class="col-md-6">
+                      <label for="Name4" class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputName4"
+                        placeholder="Name"
+                        size=""
+                        onblur=""
+                        name="name" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPhonenumber4" class="form-label"
+                        >Phone Number</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputPhonenumber4"
+                        placeholder="phone number"
+                        size=""
+                        onblur=""
+                        name="phonenumber" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputninNumber" class="form-label"
+                        >NIN Number</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputninNumber"
+                        placeholder="NIN Number"
+                        size=""
+                        onblur=""
+                        name="ninnumber" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcolor" class="form-label"
+                        >Color</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputcolor"
+                        placeholder="Color"
+                        size=""
+                        onblur=""
+                        name="color" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputnumberplate" class="form-label"
+                        >Number Plate</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputnumberplate"
+                        placeholder="Number Plate"
+                        size=""
+                        onblur=""
+                        name="numberplate" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputModel" class="form-label">Model</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputModel"
+                        placeholder="Model"
+                        size=""
+                        onblur=""
+                        name="model" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="Date" class="form-label">Date</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="inputDate"
+                        size=""
+                        onblur=""
+                        name="date" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputtime" class="form-label">Time</label>
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="inputtime"
+                        size=""
+                        onblur=""
+                        name="time" required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputgender" class="form-label"
+                        >Gender</label
+                      >
+                      <select id="inputgender" class="form-select" type="text" name="gender" size=""
+                      onblur=""required>
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputservice" class="form-label"
+                        >Service</label
+                      >
+                      <select id="inputgender" class="form-select" type="text" name="service" onblur="" required>
+                        <option>Parking</option>
+                        <option>Car Tyre</option>
+                        <option>Battery</option>
+                        <option>Nil</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputtypeofmodel" class="form-label">Description</label>
+                      <select id="inputgender" class="form-select" type="text" name="description" onblur="" required>
+                        <option>Personal Car</option>
+                        <option>Taxi</option>
+                        <option>Bodaboda</option>
+                        <option>Coaster</option>
+                        <option>Tyre Pressure</option>
+                        <option>Puncture Fixing</option>
+                        <option>Valves</option>
+                        <option>Battery Renting</option>
+                        <option>Null</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcolor" class="form-label">Duration</label>
+                      <select id="inputgender" class="form-select" type="text" name="duration" onblur="" required>
+                        <option>Day</option>
+                        <option>Night</option>
+                        <option>less than 3hrs</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputprice" class="form-label">Paid Price</label>
+                      <select id="inputgender" class="form-select" type="number" name="paidprice" onblur=""required>
+                        <option>10000</option>
+                        <option>5000</option>
+                        <option>4000</option>
+                        <option>3000</option>
+                        <option>2000</option>
+                        <option>1000</option>
+                        <option>500</option>
+                        <option>200</option>
+                        <option>Null</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputrecipt" class="form-label">Battery Price</label>
+                      <input type="number" class="form-control" id="inputbatteryprice" size=""
+                      onblur="" name="batteryprice" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputbatterysize" class="form-label">Battery Size</label>
+                      <input type="text" class="form-control" id="inputbatterysize" size=""
+                      onblur="" name="batterysize" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcartyreprice" class="form-label">Car Tyre Price</label>
+                      <input type="number" class="form-control" id="inputcartyreprice" size=""
+                      onblur="" name="cartyreprice" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcartyresize" class="form-label">Car Tyre Size</label>
+                      <input type="text" class="form-control" id="inputcartyresize" size=""
+                      onblur="" name="cartyresize" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputcartyremake" class="form-label">Car Tyre Make</label>
+                      <input type="text" class="form-control" id="inputcartyremake" size=""
+                      onblur="" name="cartyremake" required />
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="submit" class="btn btn-outline-success">
+                        Register
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+    </div>
         <div class="table-responsive table-responsive-data2">
         <div> <h4>Data table</h4></div>
-          <table class="table table-data2" onload="allClient">
+          <table class="table table-data2">
             <thead >
               <tr>
                 <th>Name</th>
@@ -370,13 +842,12 @@
     </div>
   </div>
 </div>
-                    <!-- <i class="bi bi-pencil-square" style="color:green;"></i> -->
-                    <!-- Button trigger modal -->
+                   
 <button type="button" class="btn item" data-bs-toggle="modal" data-bs-target="#exampleModaldelete">
   <i class="bi bi-trash" style="color:red;"></i>
 </button>
 
-<!-- Modal -->
+
 <div class="modal fade" id="exampleModaldelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content" id="delete-content">
@@ -397,13 +868,10 @@
                   </div>
                 </td>
               </tr>
-              <!-- stop -->
             </tbody>
           </table>
-          <!-- END DATA TABLE -->
         </div>
-        
-       </div>
+      </div>
     <script src="dash.js"></script>
     <script src="registrationValidation.js"></script>
 </body>

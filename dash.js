@@ -31,23 +31,4 @@ window.onclick = function(event) {
 
 var baseUrl = 'http://localhost:3000/';
 
-// here the function is telling 
-async function allClients(event) {
-    // 
-    event.preventDefault();
-// 
-    try {
-        const response = await fetch(baseUrl + 'users/allClients', {
-            method: 'GET',
-            headers: {
-                'content-type': 'application/json'
-            },
-            mode: 'cors',
-        })
 
-        const data = await response.json()
-        console.log('>>>>>>> all clients', data);
-    } catch (error) {
-        console.log(error)
-    }
-}
